@@ -7,7 +7,7 @@ import React from 'react'
 
 const Services = () => {
   return (
-   <section class="bg-[#111827]/90 text-gray-300 py-20 px-6">
+   <section class="bg-[#111827]/90 text-gray-300 py-20 px-6" id='#Services'>
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-yellow-400 font-semibold">SERVICES</h2>
     <h3 class="text-3xl font-bold mt-2 text-white">What I Do</h3>
@@ -16,19 +16,27 @@ const Services = () => {
       <div class="p-6 bg-[#1a1f2e]/70 rounded-xl hover:bg-[#1a1f2e]/90 transition">
         
         <h4 class="text-xl font-bold mb-2">Sketches</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <p> Hand-drawn wireframes and mockups to visualize website layout and functionality
+Quick and iterative approach to explore different design concepts
+Focus on user flow and information architecture.
+</p>
       </div>
 
       <div class="p-6 bg-[#1a1f2e]/70 rounded-xl hover:bg-[#1a1f2e]/90 transition">
       
-        <h4 class="text-xl font-bold mb-2">UI/UX Design</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <h4 class="text-xl font-bold mb-2">User Interface (UI) and User Experience (UX) design principles</h4>
+
+
+
+        <p>Creating intuitive and engaging interactions with digital products
+Balancing aesthetics and functionality for seamless user experience</p>
       </div>
 
       <div class="p-6 bg-[#1a1f2e]/70 rounded-xl hover:bg-[#1a1f2e]/90 transition">
         
-        <h4 class="text-xl font-bold mb-2">App Design</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        <h4 class="text-xl font-bold mb-2">Web Design</h4>
+        <p> Crafting visually appealing and user-friendly website layoutsCombining typography, color theory, and imagery to create brand identity
+      Ensuring responsiveness and accessibility across devices and browsers</p>
       </div>
     </div>
   </div>

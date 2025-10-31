@@ -19,7 +19,7 @@ const Navbar = () => {
         <img src="" alt="logo" />
 
         {/* ===== Desktop Nav ===== */}
-        <ul className="hidden md:flex gap-7">
+        <ul className="hidden md:flex gap-7 text-grey-300 font-bold">
           <a href="#Header" className="cursor-pointer hover:text-gray-500">Home</a>
           <a href="#About" className="cursor-pointer hover:text-gray-500">About</a>
           <a href="#Project" className="cursor-pointer hover:text-gray-500">Project</a>
