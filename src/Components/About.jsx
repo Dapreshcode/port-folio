@@ -20,7 +20,7 @@ const About = () => {
       </p>
 
       <ul class="mt-6 space-y-2">
-        <li><span class="font-semibold text-yellow-400">Birthday:</span> July 30, 2001</li>
+        <li><span class="font-semibold text-yellow-400">Birthday:</span> July 30, 2002</li>
         <li><span class="font-semibold text-yellow-400">Email:</span> empreciousbaribe@gmail.com</li>
         <li><span class="font-semibold text-yellow-400">Freelance/Internship:</span> Available</li>
       </ul>
