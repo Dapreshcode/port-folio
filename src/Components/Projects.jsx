@@ -9,7 +9,7 @@ const Projects = () => {
     title: "Portfolio Website",
     desc: "A responsive Real Estate website built with React and TailwindCSS showcasing animations and modern UI.",
     image: project1, // ✅ imported image
-    link: "#",
+    link: "https://github.com/Dapreshcode/Real-Estate",
   }
 
 ]
