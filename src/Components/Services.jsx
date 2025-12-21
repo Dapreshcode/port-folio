@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 
 
@@ -7,8 +8,19 @@ import React from 'react'
 
 const Services = () => {
   return (
-   <section class="bg-[#111827]/90 text-gray-300 py-20 px-6" id='#Services'>
-  <div class="max-w-6xl mx-auto text-center">
+   <section className="bg-[#111827]/90 text-gray-300 py-20 px-6" id='Services'>
+  <motion.div 
+  initial={{ opacity: 0, y: 45 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.25 }}
+  transition={{
+    duration: 1.3,
+    delay:  0.25,
+    type: "spring",
+    stiffness: 70,
+    damping: 15
+  }}
+  class="max-w-6xl mx-auto text-center">
     <h2 class="text-yellow-400 font-semibold">SERVICES</h2>
     <h3 class="text-3xl font-bold mt-2 text-white">What I Do</h3>
 
@@ -39,7 +51,7 @@ Balancing aesthetics and functionality for seamless user experience</p>
       Ensuring responsiveness and accessibility across devices and browsers</p>
       </div>
     </div>
-  </div>
+  </motion.div>
 </section>
 
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import project1 from "../assets/project-1.jpg";
+import project2 from "../assets/project2.jpg";
 
 const Projects = () => {
 
@@ -15,9 +16,9 @@ const Projects = () => {
   {
     id: 1,
     title: "Engineering Tech Hub",
-    desc: "A responsive Real Estate website built with React and TailwindCSS showcasing animations and modern UI.",
-    image: project1, // ✅ imported image
-    link: "https://github.com/Dapreshcode/Real-Estate",
+    desc: "Still working on it... A comprehensive platform for engineering resources and tech articles.",
+    image: project2, // ✅ imported image
+    link: "",
   }
 
 ]
@@ -34,7 +35,7 @@ const Projects = () => {
           My <span className="text-yellow-400">Projects</span>
         </h2>
         <p className="text-gray-400 max-w-xl mx-auto">
-          Here are some of my favorite projects that I’ve designed and developed using React and modern web technologies.
+          Here are some of my favorite projects that I have designed and developed using React and modern web technologies.
         </p>
       </div>
 
@@ -66,8 +67,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-
-
         </section>
   )
 }

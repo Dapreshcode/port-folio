@@ -23,6 +23,7 @@ const Navbar = () => {
           <a href="#Header" className="cursor-pointer hover:text-gray-500">Home</a>
           <a href="#About" className="cursor-pointer hover:text-gray-500">About</a>
           <a href="#Project" className="cursor-pointer hover:text-gray-500">Project</a>
+           <a href="#Services" className="cursor-pointer hover:text-gray-500">Services</a>
         </ul>
 
         {/* ===== Mobile Menu Icon ===== */}
