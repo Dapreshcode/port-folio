@@ -5,7 +5,7 @@ const About = () => {
     <section class="bg-[#0b0f19]/90 text-gray-200 py-20 px-6 md:px-20"  id='#About'>
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
     
-    <img src="/portfolio-about.jpg" alt="Profile" class="w-64 rounded-lg shadow-lg" />
+    <img src="/portfolio-about.jpg" alt="Profile" className="w-64 rounded-lg shadow-lg" />
     
     <div className='px-10 md:px-18'>
       <h2 class="text-yellow-400 text-lg font-semibold">ABOUT ME</h2>

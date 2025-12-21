@@ -6,7 +6,15 @@ const Projects = () => {
    const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
+    title: "Real Estate Website",
+    desc: "A responsive Real Estate website built with React and TailwindCSS showcasing animations and modern UI.",
+    image: project1, // ✅ imported image
+    link: "https://github.com/Dapreshcode/Real-Estate",
+  },
+
+  {
+    id: 1,
+    title: "Engineering Tech Hub",
     desc: "A responsive Real Estate website built with React and TailwindCSS showcasing animations and modern UI.",
     image: project1, // ✅ imported image
     link: "https://github.com/Dapreshcode/Real-Estate",

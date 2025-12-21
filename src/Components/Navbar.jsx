@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="absolute top-0 left-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
-        <img src="" alt="logo" />
+       <div className='text-gray-100 font-bold '><p>presh <span className='text-yellow-500'>dev</span></p></div>
 
         {/* ===== Desktop Nav ===== */}
         <ul className="hidden md:flex gap-7 text-grey-300 font-bold">
