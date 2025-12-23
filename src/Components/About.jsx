@@ -22,7 +22,7 @@ const About = () => {
  developer with a passion for creating visualy
  appealing and user-friendly web applications. Skiled in
  HTML, CSS, JavaScript, and modern frameworks like
- React . Proficient in translating designs into responsive
+ React jsx, Next js and TailwindCSS. Proficient in translating designs into responsive
  interactive web pages.
       </p>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import project1 from "../assets/project-1.jpg";
 import project2 from "../assets/project2.jpg";
+import { motion } from 'framer-motion';
 
 const Projects = () => {
 
@@ -41,7 +42,17 @@ const Projects = () => {
 
       
       {/* ==== Project Cards ==== */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <motion.div 
+      initial={{ opacity: 0, y: 45 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.25 }}
+  transition={{
+    duration: 1.3,
+    delay: 0.25,
+    type: "spring",
+    stiffness: 70,
+    damping: 15}}
+      className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -66,7 +77,7 @@ const Projects = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
         </section>
   )
 }
