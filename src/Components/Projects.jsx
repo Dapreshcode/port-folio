@@ -19,7 +19,7 @@ const Projects = () => {
     title: "Engineering Tech Hub",
     desc: "Still working on it... A comprehensive platform for engineering resources and tech articles.",
     image: project2, // ✅ imported image
-    link: "",
+    link: "https://github.com/Dapreshcode/Techflow-studyhub.git",
   }
 
 ]
