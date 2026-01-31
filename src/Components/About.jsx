@@ -33,7 +33,7 @@ const About = () => {
       </ul>
 
       <button className="mt-6 bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
-        <a href="/Precious_Baribe_Web_Developer_CV.pdf">Download CV</a>
+        <a href="Precious_Baribe_Web_Developer_CV (1).pdf">Download CV</a>
       </button>
     </div>
   </motion.div>
