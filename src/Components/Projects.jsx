@@ -1,6 +1,5 @@
 import React from 'react'
 import project1 from "../assets/project-1.jpg";
-import project2 from "../assets/project2.jpg";
 import project3 from "../assets/project3.png";
 import { motion } from 'framer-motion';
 
@@ -41,25 +40,7 @@ const Projects = () => {
       "GitHub",
       "Vercel"
     ]
-  },
-{
-    id: 2,
-    title: "Responsive portfolio website",
-    desc: "A responsive portfolio website with modern UI and smooth animations.",
-    image: project3,
-
-    demo: "https://precious-portfolio.vercel.app/",
-    github: "https://github.com/Dapreshcode/port-folio",
-
-    stack: [
-      "React",
-      "TailwindCSS",
-      "Framer Motion",
-      "GitHub",
-      "Vercel"
-    ]
-  },
-
+  }
 ];
 
 
