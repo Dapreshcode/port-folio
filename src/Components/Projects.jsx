@@ -41,7 +41,25 @@ const Projects = () => {
       "GitHub",
       "Vercel"
     ]
-  }
+  },
+{
+    id: 2,
+    title: "Responsive portfolio website",
+    desc: "A responsive portfolio website with modern UI and smooth animations.",
+    image: project3,
+
+    demo: "https://precious-portfolio.vercel.app/",
+    github: "https://github.com/Dapreshcode/port-folio",
+
+    stack: [
+      "React",
+      "TailwindCSS",
+      "Framer Motion",
+      "GitHub",
+      "Vercel"
+    ]
+  },
+
 ];
 
 
