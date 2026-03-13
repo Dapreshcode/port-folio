@@ -5,3 +5,20 @@
 body {
   @apply bg-[#111827]/90 min-h-screen;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-\[scroll_20s_linear_infinite\] {
+  animation: scroll 20s linear infinite;
+}

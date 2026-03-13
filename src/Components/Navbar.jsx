@@ -1,58 +1,113 @@
-import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'; // ✅ Correct imports
+import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // ✅ Fix the useEffect for body scroll locking
+  // lock body scroll
   useEffect(() => {
-    document.body.style.overflow = showMobileMenu ? 'hidden' : 'auto';
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
+    document.body.style.overflow = showMobileMenu ? "hidden" : "auto";
   }, [showMobileMenu]);
 
-  return (
-    <div className="fixed top-0 left-0 w-full z-10 bg-slate-700">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent h-20">
-       <div className='text-gray-100 font-bold '><p>presh <span className='text-yellow-500'>dev</span></p></div>
+  // detect scroll for navbar effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
 
-        {/* ===== Desktop Nav ===== */}
-        <ul className="hidden md:flex gap-7 text-grey-300 font-bold">
-          <a href="#Header" className="cursor-pointer hover:text-gray-500">Home</a>
-          <a href="#About" className="cursor-pointer hover:text-gray-500">About</a>
-          <a href="#Project" className="cursor-pointer hover:text-gray-500">Project</a>
-           <a href="#Services" className="cursor-pointer hover:text-gray-500">Services</a>
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
+      ${
+        scrolled
+          ? "backdrop-blur-md bg-slate-900/70 border-b border-gray-700 shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+
+        {/* Logo */}
+        <div className="text-gray-100 font-bold text-lg tracking-wide">
+          presh <span className="text-yellow-400">dev</span>
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-10 text-gray-300 font-medium">
+
+          <a
+            href="#Header"
+            className="relative hover:text-yellow-400 transition"
+          >
+            Home
+          </a>
+
+          <a
+            href="#About"
+            className="relative hover:text-yellow-400 transition"
+          >
+            About
+          </a>
+
+          <a
+            href="#projects"
+            className="relative hover:text-yellow-400 transition"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#Services"
+            className="relative hover:text-yellow-400 transition"
+          >
+            Services
+          </a>
+
         </ul>
 
-        {/* ===== Mobile Menu Icon ===== */}
+        {/* Mobile Icon */}
         <FontAwesomeIcon
           onClick={() => setShowMobileMenu(true)}
           icon={faBars}
-          className="text-2xl cursor-pointer md:hidden"
+          className="text-2xl text-white cursor-pointer md:hidden"
         />
       </div>
 
-      {/* ===== Mobile Menu Overlay ===== */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed w-full h-full top-0 left-0 bg-white flex flex-col z-50 transform transition-transform duration-300 ${
-          showMobileMenu ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed top-0 left-0 w-full h-screen bg-[#020617] text-white 
+        flex flex-col items-center justify-center gap-8 text-xl 
+        transform transition-transform duration-300 
+        ${showMobileMenu ? "translate-x-0" : "-translate-x-full"}`}
       >
-        <div className="flex justify-end ">
-          <FontAwesomeIcon
-            onClick={() => setShowMobileMenu(false)}
-            icon={faXmark}
-            className="text-2xl cursor-pointer md:hidden"
-          />
-        </div>
 
-        <ul className="flex flex-col items-center gap-3 mt-20 text-lg font-medium">
-          <li onClick={() => setShowMobileMenu(false)} className="hover:text-gray-500 cursor-pointer">Home</li>
-          <li onClick={() => setShowMobileMenu(false)} className="hover:text-gray-500 cursor-pointer">About</li>
-          <li onClick={() => setShowMobileMenu(false)} className="hover:text-gray-500 cursor-pointer">Project</li>
-        </ul>
+        <FontAwesomeIcon
+          onClick={() => setShowMobileMenu(false)}
+          icon={faXmark}
+          className="absolute top-8 right-8 text-3xl cursor-pointer"
+        />
+
+        <a onClick={() => setShowMobileMenu(false)} href="#Header">
+          Home
+        </a>
+
+        <a onClick={() => setShowMobileMenu(false)} href="#About">
+          About
+        </a>
+
+        <a onClick={() => setShowMobileMenu(false)} href="#projects">
+          Projects
+        </a>
+
+        <a onClick={() => setShowMobileMenu(false)} href="#Services">
+          Services
+        </a>
+
       </div>
     </div>
   );

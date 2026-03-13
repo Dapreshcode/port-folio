@@ -1,40 +1,55 @@
 import React from 'react'
 
-const Skills = () => {
+import { motion } from "framer-motion";
+
+const skills = [
+  "React",
+  "Next.js",
+  "JavaScript",
+  "TailwindCSS",
+  "Framer Motion",
+  "Git",
+  "GitHub",
+  "Vercel",
+  "Responsive Design"
+];
+
+export default function Skills() {
   return (
-   <section class="bg-[#0b0f19]/90 py-20 px-6 text-gray-200" id='#Skills'>
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-yellow-400 font-semibold text-center">MY SKILLS</h2>
-    <p class="text-center text-gray-400 mt-2">
-     These are the skills I have acquired as a front end web developer thus far
-    </p>
+    <section id="skills" className="py-24 px-6 bg-[#111827] text-white">
+      <div className="max-w-6xl mx-auto">
 
-    <div class="mt-10 space-y-6">
-      <div>
-        <p class="flex justify-between"><span>HTML</span><span>90%</span></p>
-        <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
-          <div class="bg-yellow-400 h-2 rounded-full w-[90%]"></div>
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-4">Tech Stack</h2>
+          <p className="text-gray-400">
+            Technologies I use to build modern web applications
+          </p>
+        </motion.div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.07 }}
+              className="bg-[#1f2937] border border-gray-700 
+              rounded-xl py-6 text-center shadow-md
+              hover:border-yellow-400 transition"
+            >
+              <p className="font-medium">{skill}</p>
+            </motion.div>
+          ))}
+
         </div>
       </div>
-
-      <div>
-        <p class="flex justify-between"><span>CSS/TAILWINDCSS</span><span>70%</span></p>
-        <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
-          <div class="bg-yellow-400 h-2 rounded-full w-[70%]"></div>
-        </div>
-      </div>
-
-      <div>
-        <p class="flex justify-between"><span>REACT</span><span>55%</span></p>
-        <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
-          <div class="bg-yellow-400 h-2 rounded-full w-[55%]"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  )
+    </section>
+  );
 }
-
-export default Skills

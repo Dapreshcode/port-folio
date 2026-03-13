@@ -46,7 +46,7 @@ const Projects = () => {
 
   return (
     <section
-      id="Project"
+      id="projects"
       className="bg-[#111827]/90 text-white py-20 px-6 md:px-20 lg:px-32"
     >
 
@@ -77,9 +77,9 @@ const Projects = () => {
   {projects.map((project) => (
     <div
       key={project.id}
-      className="bg-[#1f2937] rounded-2xl overflow-hidden shadow-lg 
+      className="relative bg-[#1f2937] rounded-2xl overflow-hidden
       hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 
-      group border border-gray-700"
+      group border border-gray-700 hover:border-yellow-400"
     >
 
       {/* Image Section */}
