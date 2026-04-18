@@ -10,9 +10,9 @@ const About = () => {
   whileInView = {{opacity:1, x:0}}
   viewport={{ once: true }}
   
-  className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+  className="max-w-full mx-auto flex flex-col md:flex-row gap-12  items-center">
     
-    <img src="/portfolio-about.jpg" alt="Profile" className="w-64 rounded-lg shadow-lg" />
+    <img src="/portfolio-about.jpg" alt="Profile" className="w-64  shadow-xl" />
     
     <div className='px-10 md:px-18'>
       <h2 className="text-yellow-400 text-lg font-semibold">ABOUT ME</h2>
